@@ -16,7 +16,6 @@ License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
 # Source0-md5:	92a8009b1730b681f0a91c0e064a292b
-Patch0:		flaky-tests.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 %if %{with tests}
@@ -58,7 +57,6 @@ Pliki nagłówkowe dla programistów używających %{kfname}.
 
 %prep
 %setup -q -n %{kfname}-%{version}
-#%patch0 -p1
 
 %build
 %cmake -B build \
