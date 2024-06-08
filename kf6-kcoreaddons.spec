@@ -5,17 +5,17 @@
 # TODO:
 # - runtime Requires if any
 
-%define		kdeframever	6.2
+%define		kdeframever	6.3
 %define		qtver		5.15.2
 %define		kfname		kcoreaddons
 Summary:	Utilities for core application functionality and accessing the OS
 Name:		kf6-%{kfname}
-Version:	6.2.0
+Version:	6.3.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	8a9f8543756701e0a2da41b64b1e202d
+# Source0-md5:	2c23ed6b693ebdd9345ec4946d8a15e4
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 %if %{with tests}
@@ -32,7 +32,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	Qt6Core >= %{qtver}
 Requires:	kf6-dirs
-Obsoletes:	kf5-%{kfname} < %{version}
+#Obsoletes:	kf5-%{kfname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -49,7 +49,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	Qt6Core >= %{qtver}
 Requires:	cmake >= 3.16
-Obsoletes:	kf5-%{kfname}-devel < %{version}
+#Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
 Header files for %{kfname} development.
@@ -96,15 +96,6 @@ rm -rf $RPM_BUILD_ROOT
 ##%attr(755,root,root) %{_libdir}/qt6/plugins/namespace/jsonplugin_cmake_macro.so
 ##%attr(755,root,root) %{_libdir}/qt6/plugins/namespace/pluginwithoutmetadata.so
 %{_datadir}/qlogging-categories6/kcoreaddons.categories
-%dir %{_datadir}/kf6/licenses
-%{_datadir}/kf6/licenses/ARTISTIC
-%{_datadir}/kf6/licenses/BSD
-%{_datadir}/kf6/licenses/GPL_V2
-%{_datadir}/kf6/licenses/GPL_V3
-%{_datadir}/kf6/licenses/LGPL_V2
-%{_datadir}/kf6/licenses/LGPL_V21
-%{_datadir}/kf6/licenses/LGPL_V3
-%{_datadir}/kf6/licenses/MIT
 %{_datadir}/qlogging-categories6/kcoreaddons.renamecategories
 %dir %{_libdir}/qt6/qml/org/kde/coreaddons
 %{_libdir}/qt6/qml/org/kde/coreaddons/kcoreaddonsplugin.qmltypes
