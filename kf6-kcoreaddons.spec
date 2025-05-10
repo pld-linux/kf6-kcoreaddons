@@ -5,17 +5,17 @@
 # TODO:
 # - runtime Requires if any
 
-%define		kdeframever	6.13
+%define		kdeframever	6.14
 %define		qtver		5.15.2
 %define		kfname		kcoreaddons
 Summary:	Utilities for core application functionality and accessing the OS
 Name:		kf6-%{kfname}
-Version:	6.13.0
+Version:	6.14.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	42ea67c66d76712a359df6b6a4d271c1
+# Source0-md5:	811a6a54570a0faee779ba6a9e01fd36
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 %if %{with tests}
@@ -110,3 +110,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/KF6/KCoreAddons
 %{_libdir}/cmake/KF6CoreAddons
 %{_libdir}/libKF6CoreAddons.so
+%{_pkgconfigdir}/KF6CoreAddons.pc
