@@ -6,17 +6,17 @@
 # - runtime Requires if any
 # - python3 buildings
 
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		kcoreaddons
 Summary:	Utilities for core application functionality and accessing the OS
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	6be9b77cf36173c9ac3cde793d232cf7
+# Source0-md5:	2d5b4a6984be3ac7a4f88569312a8151
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 %if %{with tests}
@@ -93,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %{_datadir}/mime/packages/kde6.xml
-%attr(755,root,root) %{_libdir}/libKF6CoreAddons.so.*.*.*
+%{_libdir}/libKF6CoreAddons.so.*.*.*
 %ghost %{_libdir}/libKF6CoreAddons.so.6
 ##%dir %{_libdir}/qt6/plugins/namespace
 ##%attr(755,root,root) %{_libdir}/qt6/plugins/namespace/jsonplugin_cmake_macro.so
@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt6/qml/org/kde/coreaddons
 %{_libdir}/qt6/qml/org/kde/coreaddons/kcoreaddonsplugin.qmltypes
 %{_libdir}/qt6/qml/org/kde/coreaddons/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/coreaddons/libkcoreaddonsplugin.so
+%{_libdir}/qt6/qml/org/kde/coreaddons/libkcoreaddonsplugin.so
 %{_libdir}/qt6/qml/org/kde/coreaddons/qmldir
 %dir %{_datadir}/kf6/jsonschema
 %{_datadir}/kf6/jsonschema/kpluginmetadata.schema.json
