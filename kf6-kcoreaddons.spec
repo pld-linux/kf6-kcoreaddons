@@ -49,7 +49,7 @@ Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	Qt6Core >= %{qtver}
+Requires:	Qt6Core-devel >= %{qtver}
 Requires:	cmake >= 3.16
 #Obsoletes:	kf5-%{kfname}-devel < %{version}
 
