@@ -44,6 +44,13 @@ backup files, generating random sequences, performing text
 manipulations such as macro replacement, accessing user information
 and many more.
 
+%description -l pl.UTF-8
+KCoreAddons dostarcza klas zbudowanych na bazie QtCore do wykonywania
+różnych zadań, takich jak manipulowanie typami mime, autozapisywanie
+plików, tworzenie kopii zapasowych plików, generowanie losowych
+sekwencji, wykonywanie operacji na tekstach, jak podstawianie makr,
+czytanie informacji użytkownika i wiele więcej.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
