@@ -6,17 +6,17 @@
 # - runtime Requires if any
 # - python3 buildings
 
-%define		kdeframever	6.27
+%define		kdeframever	6.28
 %define		qtver		5.15.2
 %define		kfname		kcoreaddons
 Summary:	Utilities for core application functionality and accessing the OS
 Name:		kf6-%{kfname}
-Version:	6.27.0
+Version:	6.28.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	e84b56d5e9d12c9feae4aff47fb257c2
+# Source0-md5:	d9e74816a7220c87cef482f53b5d050b
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 %if %{with tests}
